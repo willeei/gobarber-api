@@ -1,5 +1,5 @@
 {
-  "name": "primeiro-projeto-node",
+  "name": "gobarber-api",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -9,7 +9,9 @@
     "debug:server": "ts-node-dev --inspect --transpileOnly --ignore-watch node_modules src/server.ts"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "date-fns": "^2.14.0",
+    "express": "^4.17.1",
+    "uuidv4": "^6.1.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.6",
