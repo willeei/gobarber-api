@@ -10,11 +10,11 @@ authRouter.post('/', async (request, response) => {
 
     const authticateUser = new AuthenticateUserService();
 
-    const { user } = await authticateUser.execute({ email, password });
+    const { user, token } = await authticateUser.execute({ email, password });
 
     delete user.password;
 
-    return response.status(201).json({ user });
+    return response.status(201).json({ user, token });
   } catch (err) {
     return response.status(400).json({ error: err.message });
   }
